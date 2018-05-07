@@ -115,7 +115,7 @@ h1 {
     transform: rotateY( 180deg );
 }
 
-.trick {
+.disable {
     -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
  /*     transition: width 2s, height 2s, transform 2s; */
        -webkit-transform: rotate(360deg); /* Safari */
