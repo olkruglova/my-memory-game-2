@@ -64,7 +64,8 @@
           timeTiger = 0;
           openedCards = [];
           modalMessage.innerHTML = "";
-          deck.appendChild(shuffledCards[i]);  
+          deck.appendChild(shuffledCards[i]);
+          disable();  
         }
 
           // set moves to "0"
@@ -86,16 +87,16 @@
       } 
        
        /* this function starts different function to show and match cards */
-       for (let shuffledCard of shuffledCards) {
-       shuffledCard.addEventListener("click", clickedCards);
-       }
+        for (let shuffledCard of shuffledCards) {
+        shuffledCard.addEventListener("click", clickedCards);
+      }
       
               
        /* once the card is clicked the time and comparison initialise */
-       function clickedCards (){
+       function clickedCards (event){
          //display cards
-        
-        const cardTagName = event.target 
+
+        const cardTagName = event.target
         if (cardTagName.tagName === "LI"){
            if (openedCards.length < 2){  
         event.target.classList.add("open", "show");
@@ -103,7 +104,7 @@
           //add a clicked card to "openCards" list 
           openedCards.push(event.target);
         }
-        
+               
          timeTiger++
          if(timeTiger === 1){
            startTimer();
