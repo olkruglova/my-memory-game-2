@@ -109,19 +109,27 @@ h1 {
     background: #82c282;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5) inset;
     font-size: 33px;
-    -webkit-transform: rotateY( 180deg );
+    /*-webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );
     -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+    transform: rotateY( 180deg );*/
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    /*     transition: width 2s, height 2s, transform 2s; */
+          -webkit-transform: rotate(360deg); /* Safari */
+    /*     transform: rotate(360deg); */
 }
 
-.disable {
-    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
- /*     transition: width 2s, height 2s, transform 2s; */
-       -webkit-transform: rotate(360deg); /* Safari */
- /*     transform: rotate(360deg); */
- }
+.deck3 .card.unmatched {
+	/* animation-name: pulse;*/
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	/* animation-duration: .75s;*/
+	/*background: #e2043b;*/
+}
 
+.deck3 .card.disabled {
+	pointer-events: none;
+}
 
 /*
  * Styles for the Score Panel
